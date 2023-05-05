@@ -24,7 +24,8 @@ void loop() {
     
     if (ledState == LOW) {
       ledState = HIGH;
-    } else {
+    }
+    else {
       ledState = LOW;
     }
 
