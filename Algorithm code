@@ -1,12 +1,9 @@
 #include <DCF77.h>
 #include <TimeLib.h>
-#include <EEPROM.h>
 
 #define DCF_Pin 2
 #define Pend_Pin 6
 #define Dial_Pin 7
-#define EEPROM_write 11
-#define EEPROM_read 12
 
 time_t prevDisplay = 0;          // when the digital clock was displayed
 time_t time;
@@ -34,9 +31,6 @@ void setup() {
   pinMode(DCF_Pin, INPUT);
   pinMode(Pend_Pin, INPUT);
   pinMode(Dial_Pin, OUTPUT);
-  pinMode(EEPROM_write, INPUT);
-  pinMode(EEPROM_read, INPUT);
-  
   DialTime = PendCount/30;
 
   Serial.begin(9600);
